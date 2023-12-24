@@ -1,6 +1,5 @@
 'use client'
-import Image from 'next/image'
-import { FC, useEffect, useState } from 'react'
+import { FC, useState } from 'react'
 type ImageProps = {
   src: string
   alt?: string
@@ -28,7 +27,8 @@ const ImageComic: FC<ImageProps> = (props) => {
         isComplete ? 'animate-none' : 'animate-pulse'
       } `}
     >
-      <Image
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={isError ? '/err.png' : src}
         alt={alt}
         width={width}
