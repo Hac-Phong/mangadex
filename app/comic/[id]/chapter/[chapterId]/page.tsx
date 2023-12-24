@@ -4,7 +4,6 @@ import { useFetchData } from '@/hook/useFetchData'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { UseMetaData } from '@/hook/useMetaData'
-import { Suspense } from 'react'
 export async function generateMetadata({
   params,
 }: ChapterParams): Promise<Metadata> {
@@ -61,17 +60,15 @@ const ChapterPage = async ({ params }: ChapterParams) => {
       <ChangeChapter props={chapters.chapters} />
       <div className="flex flex-col justify-between items-center mx-auto w-full border-y my-6">
         <div className="max-w-[500px]">
-          <Suspense>
-            {chapters.images.map((image) => (
-              <ImageComic
-                src={image.src}
-                height={550}
-                width={550}
-                alt={chapters.chapter_name}
-                key={image.page}
-              />
-            ))}
-          </Suspense>
+          {chapters.images.map((image) => (
+            <ImageComic
+              src={image.src}
+              height={550}
+              width={550}
+              alt={chapters.chapter_name}
+              key={image.page}
+            />
+          ))}
         </div>
       </div>
       <ChangeChapter props={chapters.chapters} />
