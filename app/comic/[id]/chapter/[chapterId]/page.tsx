@@ -60,7 +60,7 @@ const ChapterPage = async ({ params }: ChapterParams) => {
       </div>
       <ChangeChapter props={chapters.chapters} />
       <div className="flex flex-col justify-between items-center mx-auto w-full border-y my-6">
-        <div>
+        <div className="max-w-[500px]">
           <Suspense>
             {chapters.images.map((image) => (
               <ImageComic

@@ -28,7 +28,8 @@ const ImageComic: FC<ImageProps> = (props) => {
         isComplete ? 'animate-none' : 'animate-pulse'
       } `}
     >
-      <Image
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={isError ? '/err.png' : src}
         alt={alt}
         width={width}
