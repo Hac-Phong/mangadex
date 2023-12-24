@@ -8,10 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        accent: '#f0f1f2',
+        orang: '#ff6740',
+        accent_hover: '#E8EAEB',
+        but: '#888',
+      },
+      fontFamily: {
+        spartan: ['--font-spartan', 'sans-serif'],
       },
     },
   },
