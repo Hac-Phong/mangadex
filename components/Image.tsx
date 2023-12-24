@@ -28,7 +28,7 @@ const ImageComic: FC<ImageProps> = (props) => {
         isComplete ? 'animate-none' : 'animate-pulse'
       } `}
     >
-      <Image
+      <img
         src={isError ? '/err.png' : src}
         alt={alt}
         width={width}
